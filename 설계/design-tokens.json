@@ -1,0 +1,273 @@
+{
+  "version": 2,
+  "status": "responsive-local-preview",
+  "theme": "light-only",
+  "implementation": "preview/styles.css",
+  "reference": {
+    "url": "https://www.reogagu-blog.com/",
+    "scope": "레이아웃·서체·글자 크기·반응형 디자인만 참고",
+    "exclude": [
+      "글 내용",
+      "소재",
+      "제목",
+      "카피",
+      "브랜드",
+      "사진"
+    ]
+  },
+  "colors": {
+    "page": {
+      "value": "#FFFFFF",
+      "role": "전체 바탕"
+    },
+    "text": {
+      "value": "#1D2320",
+      "role": "제목·본문"
+    },
+    "secondaryText": {
+      "value": "#686E69",
+      "role": "요약·캡션·메타"
+    },
+    "brand": {
+      "value": "#125135",
+      "role": "CI 녹색·버튼·분류·링크"
+    },
+    "brandDark": {
+      "value": "#0D3F29",
+      "role": "버튼·링크 상호작용"
+    },
+    "brandSoft": {
+      "value": "#EDF5EF",
+      "role": "상품 안내·보조 강조"
+    },
+    "softSurface": {
+      "value": "#F7F8F7",
+      "role": "사이드바·자료 안내"
+    },
+    "border": {
+      "value": "#E9ECE9",
+      "role": "영역 경계"
+    },
+    "gold": {
+      "value": "#BE9A50",
+      "role": "CI 금색·자료 안내 선"
+    },
+    "actionText": {
+      "value": "#FFFFFF",
+      "role": "주 버튼 글자"
+    }
+  },
+  "logo": {
+    "asset": "assets/ci-hyunnong-compact.png",
+    "originalGreen": "#125135",
+    "originalGold": "#BE9A50",
+    "background": "#FFFFFF",
+    "headerWidthPx": 66,
+    "preserveColorAndRatio": true
+  },
+  "typography": {
+    "family": "Pretendard",
+    "fallback": [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "Malgun Gothic",
+      "sans-serif"
+    ],
+    "stylesheet": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css",
+    "desktopTypeBreakpointPx": 768,
+    "body": {
+      "weight": 400,
+      "sizePx": 16,
+      "lineHeight": 1.75
+    },
+    "pageTitle": {
+      "weight": 800,
+      "mobileSizePx": 30,
+      "mobileLineHeight": 1.3,
+      "desktopSizePx": 40,
+      "desktopLineHeight": 1.26,
+      "letterSpacingEm": -0.025
+    },
+    "sectionTitle": {
+      "weight": 800,
+      "mobileSizePx": 22,
+      "desktopSizePx": 26,
+      "lineHeight": 1.4,
+      "letterSpacingEm": -0.025
+    },
+    "subsectionTitle": {
+      "weight": 700,
+      "mobileSizePx": 18,
+      "desktopSizePx": 20,
+      "lineHeight": 1.5,
+      "letterSpacingEm": -0.025
+    },
+    "listTitle": {
+      "weight": 700,
+      "mobileSizePx": 21,
+      "desktopSizePx": 22,
+      "lineHeight": 1.4,
+      "letterSpacingEm": -0.02
+    },
+    "listSummary": {
+      "weight": 400,
+      "sizePx": 15,
+      "lineHeight": 1.75,
+      "maxLines": 2
+    },
+    "answer": {
+      "mobileSizePx": 17,
+      "mobileLineHeight": 1.65,
+      "desktopSizePx": 19,
+      "desktopLineHeight": 1.7
+    },
+    "articleMeta": {
+      "sizePx": 13.5,
+      "lineHeight": 1.6
+    },
+    "caption": {
+      "sizePx": 13,
+      "lineHeight": 1.6
+    },
+    "category": {
+      "sizePx": 13,
+      "weight": 600
+    },
+    "listMeta": {
+      "sizePx": 13
+    },
+    "homeSummary": {
+      "mobileSizePx": 17,
+      "desktopSizePx": 18,
+      "desktopBreakpointPx": 900,
+      "lineHeight": 1.8,
+      "source": "현농푸드랩 적용 조정값"
+    }
+  },
+  "layout": {
+    "maxWidthPx": 1160,
+    "gutterPx": 24,
+    "desktopGutterPx": 40,
+    "smallViewportGutterPx": 20,
+    "smallViewportMaxExclusivePx": 360,
+    "articleMaxWidthPx": 760,
+    "articleDesktopGutterPx": 32,
+    "articleMaxContentWidthPx": 696,
+    "listDesktopContentWidthPx": 708,
+    "sidebarWidthPx": 300,
+    "sidebarGapPx": 72,
+    "sidebarStickyTopPx": 104,
+    "heroDesktopColumns": "1.05fr 0.95fr",
+    "heroDesktopGapPx": 64,
+    "heroMobileGapPx": 32,
+    "listThumbnailWidthPx": 132,
+    "listRowVerticalPaddingPx": 30,
+    "listThumbnailBreakpointPx": 640,
+    "buttonMinHeightPx": 46,
+    "menuMinHeightPx": 44,
+    "buttonRadiusPx": 8,
+    "heroImageRadiusPx": 14,
+    "breakpoints": {
+      "headerStoreButton": 480,
+      "listThumbnailAndTabletSidebar": 640,
+      "desktopTypographyAndGutters": 768,
+      "desktopNavigationAndHero": 900,
+      "desktopSidebar": 960
+    }
+  },
+  "archive": {
+    "pageSize": 8,
+    "samplePostCount": 12,
+    "publishingCadencePerWeek": 2,
+    "annualPostEstimate": 104,
+    "annualWeeksAssumption": 52,
+    "annualPageEstimate": 13,
+    "productionSort": "publishedAt descending",
+    "previewSort": "content/preview-posts.json array order",
+    "search": true,
+    "categoryPages": true
+  },
+  "photography": {
+    "assetCount": 7,
+    "assets": [
+      "ci-hyunnong-compact.png",
+      "wordmark-barunssal.png",
+      "use-breakfast.jpg",
+      "hero-pour.jpg",
+      "product-main.jpg",
+      "rice-two-varieties.jpg",
+      "portable-flatlay.jpg"
+    ],
+    "homeHero": {
+      "asset": "assets/use-breakfast.jpg",
+      "displayRatio": "4:3",
+      "objectFit": "cover",
+      "objectPosition": "50% 60%"
+    },
+    "listThumbnail": {
+      "displayRatio": "4:3",
+      "objectFit": "cover",
+      "radiusPx": 8
+    },
+    "article": {
+      "objectFit": "contain",
+      "maxHeightPx": 650,
+      "radiusPx": 10,
+      "caption": true
+    },
+    "product": {
+      "asset": "assets/product-main.jpg",
+      "displayRatio": "original",
+      "objectFit": "original full image"
+    },
+    "rules": [
+      "원본 파일 변형 없음",
+      "로고 원색·비율 유지",
+      "사진 위에 제목을 겹치지 않음",
+      "제공 사진을 중량·조리 시간·시험 결과의 실측 증거로 쓰지 않음"
+    ]
+  },
+  "delivery": {
+    "current": "local preview only",
+    "productionPlan": "GitHub → Cloudflare Pages Git integration",
+    "deployed": false,
+    "browserVerification": "completed within validation scope"
+  },
+  "historicalArtifacts": [
+    "설계/mobile-design.html",
+    "설계/mobile-wireframes.html",
+    "설계/모바일-와이어프레임.md"
+  ],
+  "validation": {
+    "status": "verified within recorded scope",
+    "browser": [
+      "home and article on mobile and desktop",
+      "home no horizontal overflow at 320, 390, approximately 768, 1024, 1440 CSS px",
+      "mobile menu opens and Escape closes",
+      "category, all-post and second-page navigation",
+      "12-result search, 4 results on second page and zero-result message"
+    ],
+    "static": {
+      "htmlCount": 22,
+      "internalPathChecks": 549,
+      "imageDimensionChecks": 79,
+      "errors": 0
+    },
+    "scaleFixture": {
+      "postCount": 104,
+      "pages": 13,
+      "postsPerPage": 8,
+      "missing": 0,
+      "duplicates": 0,
+      "temporary": true
+    },
+    "excluded": [
+      "production deployment",
+      "production domain",
+      "publication review of actual articles"
+    ],
+    "record": "설계/반응형-검증.md",
+    "assetRecord": "설계/preview-assets.json",
+    "originalAssetHashMatches": "7/7"
+  }
+}

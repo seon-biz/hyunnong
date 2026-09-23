@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "status": "design-asset-inventory",
+  "sourceHtmlComparison": {
+    "providedHtmlAbsolutePath": "/Users/jeongohkseo/Downloads/cafe24 (2).html",
+    "assetBundleHtmlAbsolutePath": "/Users/jeongohkseo/Downloads/barunssal-detail/cafe24.html",
+    "providedHtmlSha256": "f2398b29e5ea47e4e6f6fd0b1de43fe998100921104bb488c85f0a97425d3c67",
+    "assetBundleHtmlSha256": "f2398b29e5ea47e4e6f6fd0b1de43fe998100921104bb488c85f0a97425d3c67",
+    "byteIdentical": true
+  },
+  "verificationScope": "파일 경로·치수·바이트수·SHA256·복사 동일성 및 PNG 투명도만 확인. 제공자료 자산, 촬영조건·권리 별도 확인.",
+  "unverified": [
+    "실제 촬영 여부",
+    "이미지 사용 권리",
+    "사진의 조리·촬영 조건"
+  ],
+  "assets": [
+    {
+      "id": "ci-hyunnong-compact",
+      "sourceAbsolutePath": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/ci-hyunnong-compact.png",
+      "projectPath": "설계/assets/ci-hyunnong-compact.png",
+      "projectAbsolutePath": "/Users/jeongohkseo/Desktop/hyunnong-food-lab/설계/assets/ci-hyunnong-compact.png",
+      "format": "PNG",
+      "width": 464,
+      "height": 315,
+      "bytes": 13526,
+      "sha256": "a7fc7f4ed63d1374756e2c75823966c00741413004c372e857239c2c4fb54bf0",
+      "projectSha256": "a7fc7f4ed63d1374756e2c75823966c00741413004c372e857239c2c4fb54bf0",
+      "copyIsByteIdentical": true,
+      "roles": [
+        "CI 헤더",
+        "CI 하단"
+      ],
+      "provenanceStatus": "제공자료 자산, 촬영조건·권리 별도 확인",
+      "hasTransparency": true
+    },
+    {
+      "id": "wordmark-barunssal",
+      "sourceAbsolutePath": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/wordmark-barunssal.png",
+      "projectPath": "설계/assets/wordmark-barunssal.png",
+      "projectAbsolutePath": "/Users/jeongohkseo/Desktop/hyunnong-food-lab/설계/assets/wordmark-barunssal.png",
+      "format": "PNG",
+      "width": 2047,
+      "height": 626,
+      "bytes": 84554,
+      "sha256": "8c6b73d59302535540d6580aea84846c271e05bdd67bed77ed78ae859df786db",
+      "projectSha256": "8c6b73d59302535540d6580aea84846c271e05bdd67bed77ed78ae859df786db",
+      "copyIsByteIdentical": true,
+      "roles": [
+        "워드마크 상품용 준비"
+      ],
+      "provenanceStatus": "제공자료 자산, 촬영조건·권리 별도 확인",
+      "hasTransparency": true
+    },
+    {
+      "id": "hero-pour",
+      "sourceAbsolutePath": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/hero-pour.jpg",
+      "projectPath": "설계/assets/hero-pour.jpg",
+      "projectAbsolutePath": "/Users/jeongohkseo/Desktop/hyunnong-food-lab/설계/assets/hero-pour.jpg",
+      "format": "JPEG",
+      "width": 1720,
+      "height": 2150,
+      "bytes": 483693,
+      "sha256": "0a1f3e69fb8f15a59a75985396376f7122c14cb25583d52d3bd471cfc2e2c5d1",
+      "projectSha256": "0a1f3e69fb8f15a59a75985396376f7122c14cb25583d52d3bd471cfc2e2c5d1",
+      "copyIsByteIdentical": true,
+      "roles": [
+        "홈 대표 사진",
+        "조리 글 사진"
+      ],
+      "provenanceStatus": "제공자료 자산, 촬영조건·권리 별도 확인"
+    },
+    {
+      "id": "product-main",
+      "sourceAbsolutePath": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/product-main.jpg",
+      "projectPath": "설계/assets/product-main.jpg",
+      "projectAbsolutePath": "/Users/jeongohkseo/Desktop/hyunnong-food-lab/설계/assets/product-main.jpg",
+      "format": "JPEG",
+      "width": 1720,
+      "height": 1146,
+      "bytes": 158809,
+      "sha256": "a43a25600de18152816d277030411f266e142f7ed021ad7ab6f98c2db7ab2c09",
+      "projectSha256": "a43a25600de18152816d277030411f266e142f7ed021ad7ab6f98c2db7ab2c09",
+      "copyIsByteIdentical": true,
+      "roles": [
+        "상품 소개 사진"
+      ],
+      "provenanceStatus": "제공자료 자산, 촬영조건·권리 별도 확인"
+    }
+  ]
+}

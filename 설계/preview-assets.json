@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "assets": [
+    {
+      "asset": "preview/assets/ci-hyunnong-compact.png",
+      "source": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/ci-hyunnong-compact.png",
+      "sha256": "a7fc7f4ed63d1374756e2c75823966c00741413004c372e857239c2c4fb54bf0",
+      "matchesOriginal": true
+    },
+    {
+      "asset": "preview/assets/hero-pour.jpg",
+      "source": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/hero-pour.jpg",
+      "sha256": "0a1f3e69fb8f15a59a75985396376f7122c14cb25583d52d3bd471cfc2e2c5d1",
+      "matchesOriginal": true
+    },
+    {
+      "asset": "preview/assets/portable-flatlay.jpg",
+      "source": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/portable-flatlay.jpg",
+      "sha256": "e344957b052d21feecef6c24599636b6f4312c01094432e2903f3704c7b60785",
+      "matchesOriginal": true
+    },
+    {
+      "asset": "preview/assets/product-main.jpg",
+      "source": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/product-main.jpg",
+      "sha256": "a43a25600de18152816d277030411f266e142f7ed021ad7ab6f98c2db7ab2c09",
+      "matchesOriginal": true
+    },
+    {
+      "asset": "preview/assets/rice-two-varieties.jpg",
+      "source": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/rice-two-varieties.jpg",
+      "sha256": "71ac04ef226d38779632e48ea28fbb5c5dc7889bd30191c45085ffce4c1c9c68",
+      "matchesOriginal": true
+    },
+    {
+      "asset": "preview/assets/use-breakfast.jpg",
+      "source": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/use-breakfast.jpg",
+      "sha256": "fdbdc52e3ef63fbb61a3d9623ef25ea7b92f3a2c2f355070b514638236d6aecb",
+      "matchesOriginal": true
+    },
+    {
+      "asset": "preview/assets/wordmark-barunssal.png",
+      "source": "/Users/jeongohkseo/Downloads/barunssal-detail/img/detail/wordmark-barunssal.png",
+      "sha256": "8c6b73d59302535540d6580aea84846c271e05bdd67bed77ed78ae859df786db",
+      "matchesOriginal": true
+    }
+  ]
+}

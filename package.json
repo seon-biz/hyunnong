@@ -1,0 +1,6 @@
+{
+  "name": "hyunnong-food-lab-design",
+  "private": true,
+  "type": "module",
+  "scripts": {"preview:build": "node scripts/build-preview.mjs"}
+}

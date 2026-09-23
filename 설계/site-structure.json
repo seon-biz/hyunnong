@@ -1,0 +1,317 @@
+{
+  "version": 2,
+  "status": "responsive-local-preview",
+  "brand": "현농푸드랩",
+  "logoTarget": "home",
+  "navigation": [
+    "blog",
+    "product",
+    "about",
+    "store"
+  ],
+  "footerNavigation": [
+    "store",
+    "instagram"
+  ],
+  "externalDestinations": {
+    "store": {
+      "label": "스마트스토어 ↗",
+      "url": "https://smartstore.naver.com/hnfoodlab",
+      "target": "현농푸드랩 스마트스토어 홈"
+    },
+    "instagram": {
+      "label": "인스타그램 ↗",
+      "url": "https://www.instagram.com/hnfoodlab/",
+      "target": "현농푸드랩 인스타그램 계정"
+    }
+  },
+  "categories": [
+    {
+      "id": "preparation",
+      "label": "먹는 법",
+      "scope": "기본 조리, 물 양, 불림 시간, 식감",
+      "path": "/blog/category/preparation/",
+      "nextPagePath": "/blog/category/preparation/page/{page}/"
+    },
+    {
+      "id": "ingredients",
+      "label": "원료·구성",
+      "scope": "쌀과 원료, 인증, 한 봉의 양, 포장과 구성",
+      "path": "/blog/category/ingredients/",
+      "nextPagePath": "/blog/category/ingredients/page/{page}/"
+    },
+    {
+      "id": "storage",
+      "label": "보관·활용",
+      "scope": "보관, 아침·사무실·여행 사용 장면, 요리 활용",
+      "path": "/blog/category/storage/",
+      "nextPagePath": "/blog/category/storage/page/{page}/"
+    }
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "title": "홈",
+      "path": "/",
+      "parent": null,
+      "purpose": "브랜드를 이해하고 읽을 글이나 상품 안내로 이동",
+      "sections": [
+        "대표 글의 주제·제목·요약·이어서 읽기",
+        "use-breakfast.jpg 제공 사진",
+        "전체·분류 링크와 검색",
+        "대표 글을 제외한 최근 목록 최대 8편",
+        "실제 페이지 이동 링크",
+        "처음 읽는 분께·상품 안내 사이드바",
+        "공통 하단·스마트스토어·인스타그램"
+      ],
+      "next": [
+        {
+          "target": "article",
+          "label": "궁금한 글 읽기"
+        },
+        {
+          "target": "product",
+          "label": "바른쌀 알아보기"
+        }
+      ],
+      "emptyRule": "운영 공개 글이 없으면 준비 안내와 상품·소개 링크. 현재 미리보기에는 디자인 검토용 예시를 별도 표시."
+    },
+    {
+      "id": "blog",
+      "title": "블로그 목록",
+      "path": "/blog/",
+      "parent": "home",
+      "purpose": "내 질문에 답하는 글을 찾기",
+      "sections": [
+        "전체 또는 분류 제목",
+        "전체·먹는 법·원료·구성·보관·활용 링크",
+        "글 수와 검색",
+        "글 목록 최대 8편",
+        "실제 페이지 이동 링크",
+        "처음 읽는 분께·상품 안내 사이드바"
+      ],
+      "next": [
+        {
+          "target": "article",
+          "label": "선택한 글 읽기"
+        }
+      ],
+      "emptyRule": "검색 결과가 없으면 안내와 초기화 링크. 운영의 빈 목록은 미공개 원고로 채우지 않음.",
+      "variants": [
+        "all",
+        "category",
+        "pagination",
+        "search"
+      ]
+    },
+    {
+      "id": "article",
+      "title": "글 상세",
+      "path": "/blog/{slug}/",
+      "parent": "blog",
+      "purpose": "질문에 대한 답과 근거를 읽고 다음 확인으로 이동",
+      "sections": [
+        "홈·주제 목록 경로",
+        "주제·제목·작성 정보",
+        "질문에 대한 짧은 답",
+        "제공 사진·캡션",
+        "본문·소제목·확인 항목",
+        "자료 안내",
+        "상품 안내로 가는 행동 하나",
+        "관련 글 최대 두 편"
+      ],
+      "next": [
+        {
+          "target": "product",
+          "label": "양·식감·구성 확인"
+        },
+        {
+          "target": "article",
+          "label": "관련 질문 더 읽기"
+        },
+        {
+          "target": "store",
+          "label": "구매 판단 글: 현재 구성·가격 확인"
+        }
+      ],
+      "emptyRule": "운영은 공개 대상 원고만 주소 생성. 미리보기 예시는 발행 글과 구분. 관련 글이 없으면 생략.",
+      "previewNote": "현재는 디자인 검토용 원고 표시. 운영 원고에서 실제 작성자·게시일·수정일·출처를 반영.",
+      "futureOptionalSections": [
+        "긴 글의 목차",
+        "실제 비교표와 관찰 조건",
+        "필요한 추가 질문"
+      ]
+    },
+    {
+      "id": "product",
+      "title": "바른쌀 누룽지",
+      "path": "/products/barunssal/",
+      "parent": "home",
+      "purpose": "양·조리·원료·구성을 확인하고 스마트스토어로 이동",
+      "sections": [
+        "상품명·제공 실물 사진·스마트스토어 링크",
+        "기본 구성·원료·조리 안내 확인·보관 확인",
+        "관련 글"
+      ],
+      "next": [
+        {
+          "target": "store",
+          "label": "스마트스토어에서 확인"
+        },
+        {
+          "target": "article",
+          "label": "조리·양 비교 기록 보기"
+        }
+      ],
+      "emptyRule": "미확인 후기·시험 결과는 생략. 현재 링크는 스마트스토어 홈이며 가격·배송·후기는 스토어에서 상품을 선택한 뒤 확인.",
+      "futureVerifiedSections": [
+        "한 봉의 양",
+        "조리 방법과 식감",
+        "제조·인증 근거",
+        "구매 전 질문"
+      ]
+    },
+    {
+      "id": "about",
+      "title": "현농푸드랩 소개",
+      "path": "/about/",
+      "parent": "home",
+      "purpose": "브랜드와 글의 작성 주체를 확인",
+      "sections": [
+        "현농푸드랩 소개",
+        "제공 상품 사진",
+        "블로그의 역할",
+        "공식 스마트스토어·인스타그램"
+      ],
+      "next": [
+        {
+          "target": "product",
+          "label": "바른쌀 알아보기"
+        },
+        {
+          "target": "blog",
+          "label": "블로그 읽기"
+        }
+      ],
+      "emptyRule": "확인된 이력과 실제 운영 채널만 표시.",
+      "futureVerifiedSections": [
+        "운영 주체·문의 정보",
+        "브랜드 배경과 이력",
+        "상품 기준과 근거"
+      ]
+    }
+  ],
+  "templateTypes": [
+    "home",
+    "archive",
+    "article",
+    "product",
+    "about"
+  ],
+  "designReference": {
+    "url": "https://www.reogagu-blog.com/",
+    "scope": "디자인·서체·크기·반응형 구조만 참고",
+    "contentReferenced": false
+  },
+  "delivery": {
+    "current": "local preview only",
+    "deployed": false,
+    "futurePipeline": "GitHub → Cloudflare Pages Git integration",
+    "browserVerification": "completed within validation scope"
+  },
+  "content": {
+    "previewPostCount": 12,
+    "previewStatus": "design-review examples, not published posts",
+    "previewSource": "content/preview-posts.json",
+    "previewOrder": "array order",
+    "productionOrder": "publishedAt descending",
+    "publishingCadencePerWeek": 2,
+    "annualWeeksAssumption": 52,
+    "annualPostEstimate": 104,
+    "productionVisibility": "only reviewed posts selected for publication across list, detail, search, sitemap and RSS"
+  },
+  "archive": {
+    "pageSize": 8,
+    "annualPageEstimate": 13,
+    "categoryPages": true,
+    "homeExcludesFeaturedFromList": true,
+    "allPostsIncludesFeatured": true,
+    "firstPageUsesBasePath": true,
+    "paginationDisplay": "first, last, current plus two neighbors each side, ellipses",
+    "routes": {
+      "home": "/",
+      "homeNext": "/page/{page}/",
+      "all": "/blog/",
+      "allNext": "/blog/page/{page}/",
+      "category": "/blog/category/{category}/",
+      "categoryNext": "/blog/category/{category}/page/{page}/"
+    }
+  },
+  "search": {
+    "implemented": true,
+    "requiresJavaScript": true,
+    "scope": "all posts or current category",
+    "fields": [
+      "title",
+      "summary",
+      "points"
+    ],
+    "match": "all whitespace-delimited query terms",
+    "pageSize": 8,
+    "queryParameter": "q",
+    "pageParameter": "page",
+    "allRoute": "/blog/?q={query}",
+    "categoryRoute": "/blog/category/{category}/?q={query}",
+    "index": "/search-index.json"
+  },
+  "layout": {
+    "pageBackground": "#FFFFFF",
+    "brandColor": "#125135",
+    "font": "Pretendard",
+    "maxWidthPx": 1160,
+    "desktopSidebarBreakpointPx": 960,
+    "sidebarWidthPx": 300,
+    "columnGapPx": 72,
+    "mobileColumns": 1,
+    "articleMaxWidthPx": 760,
+    "articleMaxContentWidthPx": 696,
+    "homeHero": "assets/use-breakfast.jpg"
+  },
+  "historicalArtifacts": [
+    "설계/mobile-design.html",
+    "설계/mobile-wireframes.html",
+    "설계/모바일-와이어프레임.md"
+  ],
+  "validation": {
+    "status": "verified within recorded scope",
+    "browser": [
+      "home and article on mobile and desktop",
+      "home no horizontal overflow at 320, 390, approximately 768, 1024, 1440 CSS px",
+      "mobile menu opens and Escape closes",
+      "category, all-post and second-page navigation",
+      "12-result search, 4 results on second page and zero-result message"
+    ],
+    "static": {
+      "htmlCount": 22,
+      "internalPathChecks": 549,
+      "imageDimensionChecks": 79,
+      "errors": 0
+    },
+    "scaleFixture": {
+      "postCount": 104,
+      "pages": 13,
+      "postsPerPage": 8,
+      "missing": 0,
+      "duplicates": 0,
+      "temporary": true
+    },
+    "excluded": [
+      "production deployment",
+      "production domain",
+      "publication review of actual articles"
+    ],
+    "record": "설계/반응형-검증.md",
+    "assetRecord": "설계/preview-assets.json",
+    "originalAssetHashMatches": "7/7"
+  }
+}

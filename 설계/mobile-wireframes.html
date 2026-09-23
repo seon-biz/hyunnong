@@ -1,0 +1,360 @@
+<div id="hyunnong-mobile-wireframes" lang="ko" aria-label="현농푸드랩 모바일 와이어프레임 배치">
+  <div class="wf-review-bar" aria-label="와이어프레임 화면 선택">
+    <div class="wf-view-switch">
+      <button type="button" data-view="article" aria-pressed="true">글 상세</button>
+      <button type="button" data-view="home" aria-pressed="false">홈</button>
+    </div>
+    <span class="wf-review-note" id="wf-review-note" aria-live="polite">모바일 배치안 · 예시 원고와 사진 자리</span>
+  </div>
+
+  <div class="wf-phone" aria-label="현농푸드랩 모바일 화면">
+    <header class="wf-header">
+      <a class="wf-brand" href="#wf-home" data-go="home">현농푸드랩</a>
+      <button class="wf-menu-toggle" type="button" aria-expanded="false" aria-controls="wf-menu">메뉴</button>
+    </header>
+    <nav id="wf-menu" class="wf-menu" aria-label="주 메뉴" hidden>
+      <a href="/blog/" data-destination="blog" aria-current="page">블로그</a>
+      <a href="/products/barunssal/" data-destination="product">바른쌀 누룽지</a>
+      <a href="/about/" data-destination="about">현농푸드랩 소개</a>
+      <a class="wf-store-link" href="https://smartstore.naver.com/hnfoodlab" target="_blank" rel="noopener noreferrer">스마트스토어 ↗</a>
+    </nav>
+
+    <main id="wf-article" class="wf-page" aria-label="글 상세 와이어프레임">
+      <article class="wf-article-content">
+        <nav class="wf-breadcrumb" aria-label="현재 위치">
+          <a href="#wf-home" data-go="home">홈</a><span aria-hidden="true">/</span>
+          <a href="/blog/" data-destination="blog">블로그</a>
+        </nav>
+        <div class="wf-category">원료·구성</div>
+        <h1>누룽지 40g은<br>어느 정도일까요?</h1>
+        <div class="wf-meta">현농푸드랩 · 게시일</div>
+        <p class="wf-answer">한 봉의 양은 마른 상태와 물을 부은 뒤를 함께 보면 가늠하기 쉽습니다. 같은 그릇에 담은 모습을 기준으로 나에게 맞는 양을 확인해 보세요.</p>
+
+        <details class="wf-toc" open>
+          <summary>이 글에서 확인할 내용</summary>
+          <ol>
+            <li><a href="#wf-amount" data-scroll="wf-amount">마른 상태와 조리 후의 양</a></li>
+            <li><a href="#wf-serving" data-scroll="wf-serving">한 끼에 먹을 양을 고르는 기준</a></li>
+          </ol>
+        </details>
+
+        <section id="wf-amount" class="wf-prose-section">
+          <h2>마른 상태와 조리 후를<br>함께 보세요</h2>
+          <p>봉지에 담긴 양과 그릇에 준비한 양을 나란히 살펴보세요. 그릇의 크기와 물의 양을 함께 확인하면 비교하기 쉽습니다.</p>
+          <figure>
+            <div class="wf-photo-pair">
+              <div class="wf-photo-slot" role="img" aria-label="마른 누룽지 한 봉의 실제 사진이 들어갈 자리"><span>실제 사진<br>마른 누룽지 한 봉</span></div>
+              <div class="wf-photo-slot" role="img" aria-label="물 붓고 조리한 누룽지의 실제 사진이 들어갈 자리"><span>실제 사진<br>물 붓고 조리한 모습</span></div>
+            </div>
+            <figcaption>같은 그릇·촬영 각도 / 물 양·조리 시간 표시</figcaption>
+          </figure>
+        </section>
+
+        <section id="wf-serving" class="wf-prose-section">
+          <h2>함께 먹는 음식도<br>선택의 기준이 됩니다</h2>
+          <p>누룽지만 먹을지, 다른 음식과 곁들일지에 따라 원하는 양이 달라질 수 있습니다. 평소 먹는 양과 함께 비교해 보세요.</p>
+        </section>
+
+        <details class="wf-sources">
+          <summary>자료와 확인 기준</summary>
+          <ul>
+            <li>원재료·중량: 실제 제품 포장 표시</li>
+            <li>양과 모습: 동일 조건으로 촬영한 사진</li>
+            <li>공개할 때 자료 출처와 확인일 표시</li>
+          </ul>
+        </details>
+
+        <aside class="wf-product-prompt" aria-label="바른쌀 상품 안내">
+          <span class="wf-category">바른쌀 누룽지</span>
+          <h2>양부터 원료까지,<br>한 번에 살펴보세요.</h2>
+          <p>조리법과 판매 구성을 모았습니다.</p>
+          <a class="wf-primary" href="/products/barunssal/" data-destination="product">구성과 조리법 확인하기 <span aria-hidden="true">→</span></a>
+        </aside>
+
+        <section class="wf-related" aria-label="관련 글">
+          <h2>함께 읽으면 좋은 글</h2>
+          <a class="wf-text-row" href="/blog/preparation-checklist/" data-destination="preparation">뜨거운 물을 붓기 전 확인할 것 <span aria-hidden="true">→</span></a>
+          <a class="wf-text-row" href="/blog/storage-guide/" data-destination="storage">개별포장 누룽지 보관하는 법 <span aria-hidden="true">→</span></a>
+        </section>
+      </article>
+    </main>
+
+    <main id="wf-home" class="wf-page" aria-label="홈 와이어프레임" hidden>
+      <section class="wf-home-hero">
+        <div class="wf-category">현농푸드랩의 누룽지 이야기</div>
+        <h1>누룽지 한 그릇을<br>더 잘 알아가는 시간.</h1>
+        <p>먹는 방법부터 원료와 보관까지,<br>바른쌀 누룽지에 관한 이야기를 전합니다.</p>
+        <div class="wf-photo-slot wf-home-photo" role="img" aria-label="상품과 조리된 누룽지의 실제 사진이 들어갈 자리"><span>실제 상품·조리 사진</span></div>
+        <a class="wf-text-link" href="#wf-home-posts" data-home-reading>블로그 읽기 <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section id="wf-home-posts" class="wf-home-section" aria-label="처음 읽기 좋은 글">
+        <div class="wf-section-heading"><h2>처음 읽기 좋은 글</h2><a href="/blog/" data-destination="blog">전체 글 →</a></div>
+        <a class="wf-post" href="/blog/nurungji-40g/" data-go="article">
+          <span class="wf-category">원료·구성</span>
+          <h3>누룽지 40g은<br>어느 정도일까요?</h3>
+          <p>마른 상태와 조리 후, 한 봉의 양을 살펴봅니다.</p>
+          <span class="wf-meta">게시일</span>
+        </a>
+        <a class="wf-post" href="/blog/preparation-checklist/" data-destination="preparation">
+          <span class="wf-category">먹는 법</span>
+          <h3>뜨거운 물을 붓기 전<br>확인할 것</h3>
+          <p>제품의 조리 표시와 필요한 준비물을 확인하세요.</p>
+          <span class="wf-meta">게시일</span>
+        </a>
+        <a class="wf-post" href="/blog/storage-guide/" data-destination="storage">
+          <span class="wf-category">보관·활용</span>
+          <h3>개별포장 누룽지<br>보관하는 법</h3>
+          <p>포장에 표시된 보관 조건부터 살펴봅니다.</p>
+          <span class="wf-meta">게시일</span>
+        </a>
+      </section>
+
+      <section class="wf-home-section wf-home-product" aria-label="바른쌀 누룽지 소개">
+        <div class="wf-product-intro">
+          <div class="wf-photo-slot wf-pack-photo" role="img" aria-label="실제 상품 포장 사진 자리"><span>상품<br>사진</span></div>
+          <div><span class="wf-category">현농푸드랩의 첫 이야기</span><h2>바른쌀 누룽지</h2><p>한 봉의 양, 원료와 구성,<br>준비하는 방법까지.</p></div>
+        </div>
+        <a class="wf-primary" href="/products/barunssal/" data-destination="product">바른쌀 알아보기 <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section id="wf-home-recent" class="wf-home-section" aria-label="최근 글" hidden>
+        <div class="wf-section-heading"><h2>최근 글</h2><a href="/blog/" data-destination="blog">전체 글 →</a></div>
+        <a class="wf-post" href="/blog/rice-blend/" data-destination="rice"><span class="wf-category">원료·구성</span><h3>바른쌀은 어떤 쌀로 만들까요?</h3><p>제품의 원재료 표시를 함께 읽습니다.</p><span class="wf-meta">게시일</span></a>
+        <a class="wf-post" href="/blog/office-breakfast/" data-destination="office"><span class="wf-category">보관·활용</span><h3>사무실에서 준비하는 누룽지</h3><p>준비물부터 먹고 난 뒤 정리까지.</p><span class="wf-meta">게시일</span></a>
+        <a class="wf-post" href="/blog/water-amount/" data-destination="water"><span class="wf-category">먹는 법</span><h3>물의 양을 확인하는 방법</h3><p>제품에 적힌 조리 기준을 살펴봅니다.</p><span class="wf-meta">게시일</span></a>
+      </section>
+
+      <section class="wf-home-section wf-about-teaser">
+        <span class="wf-category">현농푸드랩</span>
+        <h2>누가 만들고,<br>어떤 이야기를 전할까요?</h2>
+        <p>상품을 만드는 기준과<br>이 글을 쓰는 사람들을 소개합니다.</p>
+        <a class="wf-text-link" href="/about/" data-destination="about">현농푸드랩 소개 <span aria-hidden="true">→</span></a>
+      </section>
+    </main>
+
+    <footer class="wf-footer">
+      <a class="wf-brand" href="#wf-home" data-go="home">현농푸드랩</a>
+      <p>바른쌀 누룽지와 일상의 식탁 이야기.</p>
+      <div class="wf-footer-channels" aria-label="외부 채널">
+        <a href="https://smartstore.naver.com/hnfoodlab" target="_blank" rel="noopener noreferrer">스마트스토어 ↗</a>
+        <a href="https://www.instagram.com/hnfoodlab/" target="_blank" rel="noopener noreferrer">인스타그램 ↗</a>
+      </div>
+      <a class="wf-footer-contact" href="/about/" data-destination="about">운영 주체·문의 안내</a>
+    </footer>
+  </div>
+
+  <dialog id="wf-destination-dialog" class="wf-destination-dialog" aria-labelledby="wf-dialog-title">
+    <div class="wf-dialog-body">
+      <span class="wf-review-note">와이어프레임 연결 대상</span>
+      <h2 id="wf-dialog-title">바른쌀 누룽지</h2>
+      <p id="wf-dialog-purpose"></p>
+      <code id="wf-dialog-route"></code>
+      <button class="wf-dialog-close" type="button">닫기</button>
+    </div>
+  </dialog>
+</div>
+<style>
+  #hyunnong-mobile-wireframes {
+    --wf-paper: light-dark(#ffffff, #1c1c1c);
+    --wf-ink: light-dark(#262626, #efefef);
+    --wf-secondary: light-dark(#646464, #bbbbbb);
+    --wf-rule: light-dark(#dedede, #484848);
+    --wf-soft: light-dark(#f3f3f3, #292929);
+    --wf-solid: light-dark(#303030, #e6e6e6);
+    --wf-solid-ink: light-dark(#ffffff, #242424);
+    --wf-gutter: 22px;
+    color-scheme: light dark;
+    color: var(--wf-ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  #hyunnong-mobile-wireframes * { box-sizing: border-box; }
+  #hyunnong-mobile-wireframes [hidden] { display: none !important; }
+  #hyunnong-mobile-wireframes button, #hyunnong-mobile-wireframes a { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
+  #hyunnong-mobile-wireframes button { cursor: pointer; }
+  #hyunnong-mobile-wireframes a { text-decoration: none; }
+  #hyunnong-mobile-wireframes h1, #hyunnong-mobile-wireframes h2, #hyunnong-mobile-wireframes h3 { color: var(--wf-ink); font-weight: 500; letter-spacing: -.035em; margin: 0; }
+  #hyunnong-mobile-wireframes h1 { font-size: 29px; line-height: 1.4; margin: 9px 0 13px; }
+  #hyunnong-mobile-wireframes h2 { font-size: 21px; line-height: 1.5; }
+  #hyunnong-mobile-wireframes h3 { font-size: 20px; line-height: 1.5; }
+  #hyunnong-mobile-wireframes p { margin: 12px 0; }
+  #hyunnong-mobile-wireframes figure { margin: 20px 0 0; }
+  #hyunnong-mobile-wireframes .wf-review-bar { width: min(100%, 390px); margin: 0 auto 14px; }
+  #hyunnong-mobile-wireframes .wf-view-switch { display: flex; gap: 8px; margin-bottom: 8px; }
+  #hyunnong-mobile-wireframes .wf-view-switch button { min-height: 44px; padding: 8px 18px; border: 1px solid var(--wf-rule); border-radius: 6px; background: var(--wf-paper); }
+  #hyunnong-mobile-wireframes .wf-view-switch button[aria-pressed="true"] { background: var(--wf-solid); color: var(--wf-solid-ink); border-color: var(--wf-solid); }
+  #hyunnong-mobile-wireframes .wf-review-note { font-size: 12px; color: var(--wf-secondary); }
+  #hyunnong-mobile-wireframes .wf-phone { width: min(100%, 390px); margin: 0 auto; border: 1px solid var(--wf-rule); background: var(--wf-paper); overflow-wrap: anywhere; }
+  #hyunnong-mobile-wireframes .wf-header { display: flex; justify-content: space-between; align-items: center; padding: 10px var(--wf-gutter); border-bottom: 1px solid var(--wf-rule); gap: 12px; }
+  #hyunnong-mobile-wireframes .wf-brand { display: inline-flex; align-items: center; min-height: 44px; font-size: 18px; font-weight: 500; letter-spacing: -.04em; }
+  #hyunnong-mobile-wireframes .wf-menu-toggle { border: 0; background: transparent; min-height: 44px; padding: 8px 0 8px 12px; font-size: 14px; }
+  #hyunnong-mobile-wireframes .wf-menu { padding: 10px var(--wf-gutter) 18px; border-bottom: 1px solid var(--wf-rule); background: var(--wf-paper); }
+  #hyunnong-mobile-wireframes .wf-menu a, #hyunnong-mobile-wireframes .wf-menu button { display: block; width: 100%; min-height: 44px; padding: 9px 0; border: 0; text-align: left; background: transparent; }
+  #hyunnong-mobile-wireframes .wf-menu a[aria-current="page"] { font-weight: 500; text-decoration: underline; text-underline-offset: 5px; }
+  #hyunnong-mobile-wireframes .wf-menu .wf-store-link { border-top: 1px solid var(--wf-rule); margin-top: 8px; padding-top: 15px; }
+  #hyunnong-mobile-wireframes .wf-article-content { padding: 10px var(--wf-gutter) 30px; }
+  #hyunnong-mobile-wireframes .wf-breadcrumb { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--wf-secondary); margin-bottom: 12px; }
+  #hyunnong-mobile-wireframes .wf-breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; }
+  #hyunnong-mobile-wireframes .wf-category { display: block; font-size: 12px; color: var(--wf-secondary); }
+  #hyunnong-mobile-wireframes .wf-meta { font-size: 12px; color: var(--wf-secondary); }
+  #hyunnong-mobile-wireframes .wf-answer { font-size: 17px; line-height: 1.85; margin: 25px 0; }
+  #hyunnong-mobile-wireframes .wf-toc { border-top: 1px solid var(--wf-rule); border-bottom: 1px solid var(--wf-rule); padding: 5px 0; }
+  #hyunnong-mobile-wireframes summary { min-height: 44px; padding: 10px 0; cursor: pointer; font-size: 14px; }
+  #hyunnong-mobile-wireframes .wf-toc ol { padding-left: 23px; margin: 0 0 8px; }
+  #hyunnong-mobile-wireframes .wf-toc a { display: inline-block; min-height: 44px; padding: 10px 0; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+  #hyunnong-mobile-wireframes .wf-prose-section { margin: 31px 0; scroll-margin-top: 16px; }
+  #hyunnong-mobile-wireframes .wf-prose-section p { font-size: 16px; line-height: 1.85; }
+  #hyunnong-mobile-wireframes .wf-photo-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  #hyunnong-mobile-wireframes .wf-photo-slot { display: grid; place-items: center; background: var(--wf-soft); border: 1px dashed var(--wf-rule); color: var(--wf-secondary); text-align: center; font-size: 12px; line-height: 1.6; padding: 10px; aspect-ratio: 1 / 1; }
+  #hyunnong-mobile-wireframes figcaption { font-size: 12px; color: var(--wf-secondary); margin-top: 9px; line-height: 1.6; }
+  #hyunnong-mobile-wireframes .wf-sources { border-top: 1px solid var(--wf-rule); border-bottom: 1px solid var(--wf-rule); padding: 3px 0; }
+  #hyunnong-mobile-wireframes .wf-sources ul { font-size: 13px; padding-left: 20px; margin: 0 0 15px; color: var(--wf-secondary); }
+  #hyunnong-mobile-wireframes .wf-product-prompt { padding: 22px; margin-top: 30px; background: var(--wf-soft); }
+  #hyunnong-mobile-wireframes .wf-product-prompt h2 { margin-top: 7px; }
+  #hyunnong-mobile-wireframes .wf-product-prompt p { color: var(--wf-secondary); font-size: 14px; }
+  #hyunnong-mobile-wireframes .wf-primary { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 48px; padding: 12px 16px; margin-top: 18px; background: var(--wf-solid); color: var(--wf-solid-ink); font-size: 14px; font-weight: 500; }
+  #hyunnong-mobile-wireframes .wf-related { margin-top: 30px; }
+  #hyunnong-mobile-wireframes .wf-related h2 { font-size: 18px; margin-bottom: 10px; }
+  #hyunnong-mobile-wireframes .wf-text-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 52px; padding: 12px 0; font-size: 14px; border-bottom: 1px solid var(--wf-rule); }
+  #hyunnong-mobile-wireframes .wf-home-hero { padding: 28px var(--wf-gutter) 24px; }
+  #hyunnong-mobile-wireframes .wf-home-hero p { font-size: 14px; line-height: 1.85; color: var(--wf-secondary); }
+  #hyunnong-mobile-wireframes .wf-home-photo { aspect-ratio: 2.35 / 1; margin-top: 21px; }
+  #hyunnong-mobile-wireframes .wf-text-link { display: inline-flex; align-items: center; gap: 20px; min-height: 44px; font-size: 14px; font-weight: 500; margin-top: 7px; }
+  #hyunnong-mobile-wireframes .wf-home-section { padding: 25px var(--wf-gutter); border-top: 1px solid var(--wf-rule); scroll-margin-top: 16px; }
+  #hyunnong-mobile-wireframes .wf-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  #hyunnong-mobile-wireframes .wf-section-heading h2 { font-size: 19px; }
+  #hyunnong-mobile-wireframes .wf-section-heading a { font-size: 12px; min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap; }
+  #hyunnong-mobile-wireframes .wf-post { display: block; padding: 20px 0; border-bottom: 1px solid var(--wf-rule); }
+  #hyunnong-mobile-wireframes .wf-post:last-child { border-bottom: 0; padding-bottom: 2px; }
+  #hyunnong-mobile-wireframes .wf-post h3 { margin: 5px 0 7px; }
+  #hyunnong-mobile-wireframes .wf-post p { font-size: 14px; line-height: 1.75; color: var(--wf-secondary); margin: 0 0 9px; }
+  #hyunnong-mobile-wireframes .wf-home-product { background: var(--wf-soft); }
+  #hyunnong-mobile-wireframes .wf-product-intro { display: grid; grid-template-columns: 78px minmax(0, 1fr); align-items: center; gap: 17px; }
+  #hyunnong-mobile-wireframes .wf-pack-photo { aspect-ratio: 3 / 4; background: var(--wf-paper); }
+  #hyunnong-mobile-wireframes .wf-product-intro h2 { margin-top: 4px; }
+  #hyunnong-mobile-wireframes .wf-product-intro p { font-size: 13px; color: var(--wf-secondary); margin: 6px 0 0; }
+  #hyunnong-mobile-wireframes .wf-about-teaser h2 { margin-top: 7px; }
+  #hyunnong-mobile-wireframes .wf-about-teaser p { font-size: 14px; color: var(--wf-secondary); }
+  #hyunnong-mobile-wireframes .wf-footer { padding: 23px var(--wf-gutter) 28px; border-top: 1px solid var(--wf-rule); }
+  #hyunnong-mobile-wireframes .wf-footer .wf-brand { font-size: 16px; }
+  #hyunnong-mobile-wireframes .wf-footer p { font-size: 12px; color: var(--wf-secondary); margin: 0 0 9px; }
+  #hyunnong-mobile-wireframes .wf-footer-channels { display: flex; flex-wrap: wrap; column-gap: 18px; }
+  #hyunnong-mobile-wireframes .wf-footer-channels a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; font-size: 13px; }
+  #hyunnong-mobile-wireframes .wf-footer-contact { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; color: var(--wf-secondary); }
+  #hyunnong-mobile-wireframes .wf-destination-dialog { background: var(--wf-paper); color: var(--wf-ink); border: 1px solid var(--wf-rule); width: min(340px, calc(100% - 32px)); max-width: 100%; padding: 0; }
+  #hyunnong-mobile-wireframes .wf-destination-dialog::backdrop { background: light-dark(#00000066, #000000aa); }
+  #hyunnong-mobile-wireframes .wf-dialog-body { padding: 24px; }
+  #hyunnong-mobile-wireframes .wf-dialog-body h2 { margin-top: 10px; }
+  #hyunnong-mobile-wireframes .wf-dialog-body p { font-size: 14px; }
+  #hyunnong-mobile-wireframes .wf-dialog-body code { display: block; font-size: 12px; white-space: normal; overflow-wrap: anywhere; color: var(--wf-secondary); }
+  #hyunnong-mobile-wireframes .wf-dialog-close { display: block; width: 100%; min-height: 44px; margin-top: 20px; border: 0; background: var(--wf-solid); color: var(--wf-solid-ink); }
+  @media (max-width: 350px) {
+    #hyunnong-mobile-wireframes h1 { font-size: 26px; }
+    #hyunnong-mobile-wireframes .wf-product-prompt { padding: 18px; }
+  }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('hyunnong-mobile-wireframes');
+  const article = root.querySelector('#wf-article');
+  const home = root.querySelector('#wf-home');
+  const menu = root.querySelector('#wf-menu');
+  const menuToggle = root.querySelector('.wf-menu-toggle');
+  const viewButtons = Array.from(root.querySelectorAll('[data-view]'));
+  const dialog = root.querySelector('#wf-destination-dialog');
+  const note = root.querySelector('#wf-review-note');
+  const posts = root.querySelector('#wf-home-posts');
+  const recent = root.querySelector('#wf-home-recent');
+  const homeReading = root.querySelector('[data-home-reading]');
+  const state = { view: 'article', postState: 'three', gutter: 22 };
+  const destinations = {
+    blog: {title:'블로그 목록', purpose:'먹는 법·원료와 구성·보관과 활용으로 글을 찾는 페이지입니다.', route:'/blog/'},
+    product: {title:'바른쌀 누룽지', purpose:'한 봉의 양·조리법·원료·구성을 확인하고 스마트스토어로 이어지는 페이지입니다.', route:'/products/barunssal/'},
+    about: {title:'현농푸드랩 소개', purpose:'브랜드·작성 주체·문의와 공식 인스타그램 계정을 소개하는 페이지입니다.', route:'/about/'},
+    preparation: {title:'뜨거운 물을 붓기 전 확인할 것', purpose:'관련 글로 이어지는 자리입니다. 원고 공개 후 연결합니다.', route:'/blog/preparation-checklist/'},
+    storage: {title:'개별포장 누룽지 보관하는 법', purpose:'관련 글로 이어지는 자리입니다. 원고 공개 후 연결합니다.', route:'/blog/storage-guide/'},
+    rice: {title:'바른쌀은 어떤 쌀로 만들까요?', purpose:'최근 글이 쌓였을 때의 목록 배치 예시입니다.', route:'/blog/rice-blend/'},
+    office: {title:'사무실에서 준비하는 누룽지', purpose:'최근 글이 쌓였을 때의 목록 배치 예시입니다.', route:'/blog/office-breakfast/'},
+    water: {title:'물의 양을 확인하는 방법', purpose:'최근 글이 쌓였을 때의 목록 배치 예시입니다.', route:'/blog/water-amount/'}
+  };
+
+  function closeMenu() {
+    menu.hidden = true;
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '메뉴';
+  }
+  function render() {
+    article.hidden = state.view !== 'article';
+    home.hidden = state.view !== 'home';
+    viewButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === state.view)));
+    const blogLink = menu.querySelector('[data-destination="blog"]');
+    if (state.view === 'article') blogLink.setAttribute('aria-current', 'page');
+    else blogLink.removeAttribute('aria-current');
+    posts.hidden = state.postState === 'none';
+    recent.hidden = state.postState !== 'six';
+    homeReading.textContent = state.postState === 'none' ? '바른쌀 알아보기 →' : '블로그 읽기 ↓';
+    homeReading.setAttribute('href', state.postState === 'none' ? '/products/barunssal/' : '#wf-home-posts');
+    root.style.setProperty('--wf-gutter', state.gutter + 'px');
+    const layoutLabel = {none:'공개 글 0편 배치', three:'초기 3편 배치', six:'글이 쌓인 뒤의 배치'}[state.postState];
+    note.textContent = (state.view === 'home' ? layoutLabel : '모바일 글 상세 배치') + ' · 예시 원고와 사진 자리';
+  }
+  function switchView(view, scroll) {
+    state.view = view;
+    closeMenu();
+    render();
+    if (scroll) {
+      viewButtons.find(button => button.dataset.view === view).focus();
+      root.scrollIntoView({block:'start', behavior:'auto'});
+    }
+  }
+  function showDestination(key) {
+    const destination = destinations[key];
+    if (!destination) return;
+    root.querySelector('#wf-dialog-title').textContent = destination.title;
+    root.querySelector('#wf-dialog-purpose').textContent = destination.purpose;
+    root.querySelector('#wf-dialog-route').textContent = destination.route;
+    dialog.showModal();
+  }
+
+  viewButtons.forEach(button => button.addEventListener('click', () => switchView(button.dataset.view, false)));
+  root.querySelectorAll('[data-go]').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    switchView(link.dataset.go, true);
+  }));
+  root.querySelectorAll('[data-destination]').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    showDestination(link.dataset.destination);
+  }));
+  root.querySelectorAll('[data-scroll]').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    root.querySelector('#' + link.dataset.scroll).scrollIntoView({block:'start', behavior:'auto'});
+  }));
+  homeReading.addEventListener('click', event => {
+    event.preventDefault();
+    if (state.postState === 'none') showDestination('product');
+    else posts.scrollIntoView({block:'start', behavior:'auto'});
+  });
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') !== 'true';
+    menuToggle.setAttribute('aria-expanded', String(expanded));
+    menuToggle.textContent = expanded ? '닫기' : '메뉴';
+    menu.hidden = !expanded;
+  });
+  root.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !dialog.open && !menu.hidden) {
+      closeMenu();
+      menuToggle.focus();
+    }
+  });
+  root.querySelector('.wf-dialog-close').addEventListener('click', () => dialog.close());
+  render();
+
+  if (globalThis.Tweak) {
+    const tweak = new Tweak({container:root, onChange:render});
+    tweak.addSelect(state, 'postState', {label:'홈의 공개 글', options:[{label:'없음',value:'none'},{label:'초기 3편',value:'three'},{label:'6편으로 증가',value:'six'}]});
+    tweak.addSlider(state, 'gutter', {label:'모바일 좌우 여백', min:16, max:24, step:2, unit:'px', reference:'--wf-gutter'});
+  }
+})();
+</script>
