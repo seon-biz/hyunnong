@@ -1327,3 +1327,17 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   .gift-layout { grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 40px; }
   .text-card { padding: 30px 28px; }
 }
+
+/* 메인 배너(M1)는 카피가 짧아 높이를 낮춰 쓴다 */
+.feature.is-compact .feature-inner { padding-top: 44px; padding-bottom: 42px; }
+/* 900px 미만에서만 사진 높이를 줄인다. 이상에서는 사진이 배너 높이를 그대로 채운다 */
+@media (max-width: 899px) {
+  .feature.is-compact .feature-photo { height: clamp(300px, 80vw, 520px); }
+}
+@media (min-width: 768px) {
+  .feature.is-compact .feature-inner { padding-top: 54px; padding-bottom: 52px; }
+}
+@media (min-width: 900px) {
+  .feature.is-compact { min-height: 430px; }
+  .feature.is-compact .feature-inner { padding-top: 40px; padding-bottom: 40px; }
+}
