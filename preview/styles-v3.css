@@ -1000,3 +1000,142 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ---------- 메인 페이지 (수정안 v1) ---------- */
+.category-label.is-static { cursor: default; }
+
+/* M2 핵심 가치 — 링크가 아닌 번호형 항목 */
+.reading-guide .strip-static {
+  display: grid;
+  grid-template-columns: 36px minmax(0,1fr);
+  gap: 15px;
+  align-items: start;
+  padding: 20px 0;
+}
+.reading-guide .strip-static > span {
+  color: var(--gold);
+  font-family: var(--display);
+  font-size: 15px;
+}
+.reading-guide .strip-static h3 {
+  margin-bottom: 6px;
+  font-family: var(--font);
+  font-size: 15px;
+  letter-spacing: -.02em;
+}
+.reading-guide .strip-static p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+/* M4 신뢰 배너 */
+.trust-bar {
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--brand-soft);
+}
+.trust-bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+}
+.trust-mark { width: 88px; flex: none; }
+.trust-mark img { width: 100%; }
+.trust-mark .asset-slot { min-height: 0; aspect-ratio: 1; gap: 0; }
+.trust-mark .asset-slot span { display: none; }
+.trust-mark .asset-slot code { font-size: 9px; line-height: 1.3; word-break: break-all; }
+.trust-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 13px;
+  list-style: none;
+}
+.trust-facts li { display: flex; align-items: center; gap: 9px; }
+.trust-facts b { color: var(--brand); font-weight: 700; }
+.trust-facts li + li::before {
+  width: 1px;
+  height: 13px;
+  background: rgba(18,81,53,.2);
+  content: "";
+}
+
+/* M6 만든 사람들 — C-BANNER 좌우 반전 (반전 규칙은 900px 이상에서) */
+
+/* M8 최종 CTA */
+.final-cta {
+  padding: 72px 0 80px;
+  background: var(--brand);
+  color: #fff;
+  text-align: center;
+}
+.final-cta h2 { margin-bottom: 26px; color: #fff; }
+.final-cta .button {
+  border-color: #fff;
+  background: #fff;
+  color: var(--brand);
+}
+.final-cta .button:hover { background: var(--brand-soft); }
+
+/* 자료 미확보 이미지 자리표시 */
+.asset-slot {
+  display: flex;
+  width: 100%;
+  min-height: 180px;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px dashed rgba(18,81,53,.3);
+  background: repeating-linear-gradient(135deg, var(--panel), var(--panel) 11px, #fff 11px, #fff 22px);
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+.asset-slot code { color: var(--brand); font-size: 11px; }
+.topic-card figure .asset-slot { min-height: 0; aspect-ratio: 4 / 3; }
+
+/* 푸터 — 보조 채널·회사 정보 */
+.footer-channel-sub {
+  display: flex;
+  flex-basis: 100%;
+  gap: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.footer-channel-sub a { min-height: 30px; color: rgba(255,255,255,.6) !important; }
+.footer-channel-sub a:hover { color: #fff !important; }
+.footer-legal {
+  margin-top: 34px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.13);
+}
+.footer-legal p { color: rgba(255,255,255,.55); font-size: 12px; line-height: 1.9; }
+.footer-legal a { color: rgba(255,255,255,.82); text-decoration: underline; }
+.footer-legal .footer-copyright {
+  margin-top: 8px;
+  color: rgba(255,255,255,.38);
+  font-size: 11px;
+}
+.needs-info {
+  padding: 1px 7px;
+  border-radius: 2px;
+  background: rgba(190,154,80,.26);
+  color: rgba(255,255,255,.9);
+  font-size: 11px;
+}
+
+@media (min-width: 900px) {
+  .reading-guide .strip-static { padding: 3px 0; }
+  .brand-feature.is-reversed .brand-feature-inner {
+    grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr);
+  }
+  .brand-feature.is-reversed figure { order: 2; }
+}
