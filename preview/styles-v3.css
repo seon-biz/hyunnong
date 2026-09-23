@@ -4,17 +4,20 @@
   color-scheme: light;
   --bg: #ffffff;
   --ink: #1d2320;
-  --muted: #687069;
+  --muted: #626a63;
   --line: #e4e9e4;
   --brand: #125135;
   --brand-dark: #0d3f29;
   --brand-soft: #edf5ef;
-  --brand-pale: #f3f6f1;
+  /* 배경 3단계: #fff → --panel → --brand-pale. 각 단계 ΔE 4 이상 */
+  --brand-pale: #e7eee4;
   --gold: #be9a50;
-  --panel: #f7f8f6;
+  --panel: #f4f6f2;
   --font: Pretendard, -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
   --display: var(--font);
   --shadow: 0 24px 60px rgba(20, 56, 38, .11);
+  /* 섹션 세로 리듬 — 모든 콘텐츠 섹션이 같은 단위를 쓴다 */
+  --section-y: 64px;
 }
 
 * { box-sizing: border-box; }
@@ -299,7 +302,7 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   backdrop-filter: blur(10px);
 }
 
-.topic-showcase { padding: 88px 0 98px; background: #fff; }
+.topic-showcase { padding: var(--section-y) 0; background: #fff; }
 .section-heading {
   display: grid;
   grid-template-columns: minmax(0,1fr);
@@ -351,7 +354,7 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
 }
 .topic-card b { color: var(--brand); font-size: 13px; }
 
-.brand-feature { padding: 0 0 96px; background: #fff; }
+.brand-feature { padding: var(--section-y) 0; background: #fff; }
 .brand-feature-inner {
   display: grid;
   max-width: 1240px;
@@ -412,7 +415,7 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
 .brand-feature-copy .button:hover { background: var(--brand-soft); }
 
 .reading-guide {
-  padding: 76px 0;
+  padding: var(--section-y) 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: var(--panel);
@@ -940,7 +943,7 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   }
   .feature-photo::before {
     width: 18%;
-    background: linear-gradient(90deg, var(--brand-pale), rgba(243,246,241,0));
+    background: linear-gradient(90deg, var(--brand-pale), rgba(231,238,228,0));
   }
   .feature-photo img { object-position: 50% 58%; }
   .photo-caption { right: 28px; bottom: 26px; }
@@ -980,7 +983,6 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   .topic-grid { gap: 46px; }
   .topic-card-copy { padding-top: 22px; }
   .topic-card-copy > span { top: 22px; }
-  .brand-feature { padding-bottom: 78px; }
   .archive-toolbar { align-items: stretch; }
   .search-form { max-width: none; }
   .home-archive .post-row { min-height: 0; }
@@ -1070,7 +1072,7 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
 
 /* M8 최종 CTA */
 .final-cta {
-  padding: 72px 0 80px;
+  padding: var(--section-y) 0;
   background: var(--brand);
   color: #fff;
   text-align: center;
@@ -1170,13 +1172,20 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
 .section-jump .category-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
 /* 앵커 이동 시 헤더 + 바로가기 바 높이만큼 여백을 둔다 */
 .product-section[id], .topic-showcase[id] { scroll-margin-top: 152px; }
-.product-section { padding: 66px 0; background: #fff; }
+.product-section { padding: var(--section-y) 0; background: #fff; }
 .product-section.is-panel {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: var(--panel);
 }
-.product-section + .product-section:not(.is-panel) { padding-top: 0; }
+/* 배경이 같은 섹션이 이어지면 앞 섹션의 하단 여백만 남겨 한 단위로 만든다.
+   배경이 바뀌는 경계(패널→흰색)는 각자 제 여백을 갖는다. */
+.product-section:not(.is-panel) + .product-section:not(.is-panel),
+.product-section:not(.is-panel) + .topic-showcase,
+.topic-showcase + .product-section:not(.is-panel),
+.product-section:not(.is-panel) + .brand-feature,
+.topic-showcase + .brand-feature,
+.prose + .brand-feature { padding-top: 0; }
 .sub-heading {
   margin: 44px 0 18px;
   font-family: var(--display);
@@ -1320,10 +1329,16 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   .soak-grid { gap: 22px; }
   .cert-layout { grid-template-columns: 96px minmax(0,1fr); gap: 28px; }
 }
+/* 긴 히어로 제목: 히어로가 2단이 되는 960~1199px 구간에서만 컬럼 폭이 좁아
+   "농업을 잘 / 아는 회사가"처럼 어절 중간에서 끊긴다. 폭에 맞춰 제목을 줄인다. */
+@media (min-width: 900px) and (max-width: 1319px) {
+  .feature.is-long-title h1 { font-size: clamp(38px, calc(38px + (100vw - 900px) * 0.0476), 58px); }
+}
+
 @media (min-width: 768px) {
+  :root { --section-y: 88px; }
   .section-jump { top: 91px; }
   .product-section[id], .topic-showcase[id] { scroll-margin-top: 162px; }
-  .product-section { padding: 84px 0; }
   .gift-layout { grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 40px; }
   .text-card { padding: 30px 28px; }
 }
