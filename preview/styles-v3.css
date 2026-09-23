@@ -105,7 +105,7 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   align-items: center;
   flex-shrink: 0;
 }
-.brand img { width: 160px; height: auto; }
+.brand img { width: 128px; height: auto; }
 .desktop-nav {
   display: none;
   align-items: center;
@@ -846,7 +846,7 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   min-height: 44px;
   align-items: center;
 }
-.footer-logo img { width: 220px; height: auto; }
+.footer-logo img { width: 176px; height: auto; }
 .site-footer p { color: rgba(255,255,255,.62); font-size: 13px; }
 .site-footer nav {
   display: flex;
@@ -891,7 +891,7 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   h1 { font-size: 48px; line-height: 1.22; }
   h2 { font-size: 34px; }
   .header-inner { min-height: 90px; }
-  .brand img { width: 205px; }
+  .brand img { width: 164px; }
   .feature-inner { padding-top: 76px; padding-bottom: 72px; }
   .feature-copy > p { font-size: 18px; }
   .section-heading {
