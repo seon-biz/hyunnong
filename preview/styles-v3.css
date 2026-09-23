@@ -1156,3 +1156,174 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
   /* A2 걸어온 길: 모바일은 연도 → 내용 세로 1열 */
   .product-facts.timeline > div { grid-template-columns: minmax(0,1fr); gap: 4px; }
 }
+
+/* ---------- 제품 페이지 (수정안 v1) ---------- */
+.section-jump {
+  position: sticky;
+  z-index: 15;
+  top: 81px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(10px);
+}
+.section-jump .category-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+/* 앵커 이동 시 헤더 + 바로가기 바 높이만큼 여백을 둔다 */
+.product-section[id], .topic-showcase[id] { scroll-margin-top: 152px; }
+.product-section { padding: 66px 0; background: #fff; }
+.product-section.is-panel {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+.product-section + .product-section:not(.is-panel) { padding-top: 0; }
+.sub-heading {
+  margin: 44px 0 18px;
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+}
+.section-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+.section-line { margin-bottom: 26px; color: var(--muted); }
+.section-note + .section-line { margin-top: 14px; }
+
+/* C-TEXTCARD */
+.text-card-grid { display: grid; gap: 18px; }
+.text-card {
+  padding: 26px 24px;
+  border-top: 3px solid var(--brand);
+  background: var(--panel);
+}
+.is-panel .text-card { background: #fff; }
+.text-card h3 {
+  margin-bottom: 10px;
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+.text-card p { color: var(--muted); font-size: 14px; line-height: 1.78; }
+
+/* P3 드시는 법 */
+.howto-steps {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+.howto-steps li {
+  display: grid;
+  grid-template-columns: 38px minmax(0,1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.howto-steps span { color: var(--gold); font-family: var(--display); font-size: 15px; }
+.howto-steps p { font-weight: 650; }
+.soak-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.soak-grid figure { margin-bottom: 12px; overflow: hidden; background: var(--panel); }
+.soak-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.soak-grid .asset-slot { min-height: 0; aspect-ratio: 1; gap: 2px; }
+.soak-grid .asset-slot span { display: none; }
+.soak-grid .asset-slot code { font-size: 9px; word-break: break-all; }
+.soak-grid b { display: block; color: var(--brand); font-size: 15px; }
+.soak-grid span { color: var(--muted); font-size: 13px; }
+
+/* P5·P9 표 */
+.data-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.data-table table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.data-table caption { text-align: left; }
+.data-table th, .data-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.data-table thead th {
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.data-table tbody th { width: 160px; font-weight: 650; }
+.data-table td { color: var(--muted); }
+.data-table a { color: var(--brand); text-decoration: underline; }
+.cert-layout { display: grid; gap: 20px; align-items: start; }
+.cert-layout .data-table table { min-width: 300px; }
+
+/* P8 선물 */
+.gift-layout { display: grid; gap: 28px; align-items: start; }
+.gift-photo { overflow: hidden; background: var(--panel); }
+.gift-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.gift-photo .asset-slot { min-height: 0; aspect-ratio: 4 / 3; }
+
+/* P10 FAQ */
+.faq-group + .faq-group { margin-top: 38px; }
+.faq-group > h3 {
+  margin-bottom: 12px;
+  color: var(--brand);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+}
+.faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 19px 0;
+  cursor: pointer;
+  font-weight: 650;
+  list-style: none;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after {
+  flex: none;
+  color: var(--brand);
+  content: "+";
+  font-size: 18px;
+}
+.faq-list details[open] summary::after { content: "−"; }
+.faq-answer { padding: 0 0 22px; color: var(--muted); font-size: 15px; }
+.faq-answer p { margin: 0; }
+.faq-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 18px; }
+
+@media (min-width: 640px) {
+  .text-card-grid.is-2col { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .topic-grid.is-2col { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .soak-grid { gap: 22px; }
+  .cert-layout { grid-template-columns: 96px minmax(0,1fr); gap: 28px; }
+}
+@media (min-width: 768px) {
+  .section-jump { top: 91px; }
+  .product-section[id], .topic-showcase[id] { scroll-margin-top: 162px; }
+  .product-section { padding: 84px 0; }
+  .gift-layout { grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 40px; }
+  .text-card { padding: 30px 28px; }
+}
