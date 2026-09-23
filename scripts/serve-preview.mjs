@@ -3,7 +3,9 @@ import { readFile, stat } from 'node:fs/promises';
 import { extname, join, resolve, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = resolve(fileURLToPath(new URL('../preview', import.meta.url)));
+const root = process.env.ROOT
+  ? resolve(process.env.ROOT)
+  : resolve(fileURLToPath(new URL('../preview', import.meta.url)));
 const port = Number(process.env.PORT || 4173);
 
 const types = {
