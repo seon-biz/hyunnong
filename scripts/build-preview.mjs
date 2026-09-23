@@ -131,7 +131,44 @@ function article(p) {
   return layout(p.title,`<main id="main" class="read"><nav class="breadcrumbs" aria-label="현재 위치"><a href="/">메인</a><span aria-hidden="true">/</span><a href="${categoryUrl(p.category)}">${categories[p.category]}</a></nav><article><header class="article-header"><span class="eyebrow">${categories[p.category]}</span><h1>${e(p.title)}</h1><p class="article-meta">현농푸드랩 <span aria-hidden="true">·</span> 디자인 검토용 원고</p></header><p class="answer">${e(p.summary)}</p><figure class="article-photo">${picture(p,'',true)}<figcaption>${e(p.alt)} · 제공 이미지</figcaption></figure><div class="prose"><h2 id="checklist">먼저 확인할 내용</h2><p>제품을 고르거나 준비할 때에는 포장에 적힌 정보와 실제로 사용할 환경을 함께 살펴보세요.</p><ul>${p.points.map(point=>`<li>${e(point)}</li>`).join('')}</ul><h2>포장과 상품 안내를 함께 보세요</h2><p>같은 누룽지라도 제품마다 구성과 조리 방법이 다를 수 있습니다. 바른쌀의 원료와 포장, 기본 조리 안내는 상품 소개에서 확인할 수 있습니다.</p><aside class="source-note"><strong>이 글의 자료</strong><p>현농푸드랩 제공 상세페이지와 제품 이미지로 구성한 원고 예시입니다. 사진을 특정 중량이나 조리 시간의 실측 증거로 사용하지 않습니다.</p></aside></div>${productCTA()}<section class="related-posts"><h2>함께 읽어보세요</h2><ul>${related.map(x=>`<li><span class="post-category">${categories[x.category]}</span><a href="${postUrl(x)}">${e(x.title)} →</a></li>`).join('')}</ul></section></article></main>`);
 }
 const productPage = () => layout('바른쌀 누룽지',`<main id="main"><section class="wrap product-hero"><div><span class="eyebrow">현농푸드랩</span><h1>바른쌀 누룽지</h1><p class="answer">원료와 포장, 먹는 방법까지.<br>한 봉을 고르기 전에 살펴보세요.</p>${external(store,'스마트스토어에서 보기','button')}</div><img src="/assets/product-main.jpg" alt="바른쌀 누룽지 상자와 개별포장 파우치" width="1720" height="1146"></section><section class="read product-details"><h2>한 봉씩 준비하는 누룽지</h2><p>제공된 제품 표시 기준으로 한 봉 40g, 5봉 구성입니다. 실제 판매 옵션과 가격은 스마트스토어에서 확인할 수 있습니다.</p><dl class="product-facts"><div><dt>기본 구성</dt><dd>40g × 5봉</dd></div><div><dt>원료</dt><dd>국산 유기농쌀</dd></div><div><dt>준비 방법</dt><dd>제품 포장에 적힌 물의 양과 조리 시간 확인</dd></div><div><dt>보관</dt><dd>포장에 표시된 조건과 소비기한 확인</dd></div></dl><h2>더 자세히 읽어보세요</h2><ul class="simple-links">${posts.slice(0,3).map(p=>`<li><a href="${postUrl(p)}">${e(p.title)} →</a></li>`).join('')}</ul></section></main>`,'product');
-const aboutPage = () => layout('현농푸드랩 소개',`<main id="main" class="read about"><span class="eyebrow">HYUNNONG FOOD LAB</span><h1>현농푸드랩의<br>누룽지 이야기.</h1><p class="answer">바른쌀 누룽지를 만드는 현농푸드랩이 원료와 구성, 먹는 방법과 일상에서의 활용을 이야기합니다.</p><img class="about-product" src="/assets/product-main.jpg" alt="현농푸드랩의 바른쌀 누룽지" width="1720" height="1146"><div class="prose"><h2>제품을 이해하는 데 필요한 글</h2><p>제품에 표시된 정보와 자료를 바탕으로, 구매 전 궁금한 점과 준비할 때 필요한 내용을 차근차근 정리합니다.</p><h2>현농푸드랩 공식 채널</h2><p>판매 구성과 상품 문의는 스마트스토어에서, 브랜드의 사진과 소식은 인스타그램에서 확인하실 수 있습니다.</p><div class="channel-links">${external(store,'스마트스토어','button')}${external(instagram,'인스타그램','button button-outline')}</div></div></main>`,'about');
+// ---- 현농푸드랩 소개 페이지 (수정안 v1) ----
+// A2 걸어온 길: 연도가 확정된 행만 노출한다. [확인 필요: 연도]
+const milestones = [
+  {year:'2007', copy:'(주)현농 설립 — 친환경 농자재 제조·판매'},
+  {year:'2013', copy:'(주)현농경영연구소 설립 — 농업인 교육·경영컨설팅'},
+  {year:'', copy:'(주)현농푸드랩 설립'},
+  {year:'', copy:'첫 제품 바른쌀 즉석 누룽지 출시'},
+];
+// A4 숫자로 보는 현농 [자리표시: 근거 문서 확보 후 수치 최종 확인]
+const aboutFigures = [
+  {value:'2007년', copy:'(주)현농 설립'},
+  {value:'2013년', copy:'(주)현농경영연구소 설립'},
+  {value:'800회 이상', copy:'농업인 교육'},
+  {value:'3,000회 이상', copy:'농업 경영컨설팅'},
+];
+const factList = (rows, cls='') => `<dl class="product-facts ${cls}">${rows.map(row=>`<div><dt>${e(row.term)}</dt><dd>${row.copy}</dd></div>`).join('')}</dl>`;
+
+// A5 원료 품종 수상 — 원출처 확보 전까지 비노출 (주석으로만 보관)
+const varietyAward = `<!-- A5 원료 품종 수상 (비노출)
+     원료 품종 '천지향5세' — 2024 대한민국 우수품종상 대통령상 수상 품종
+     노출 조건: 원출처(공식 발표·보도) 링크 확보
+     노출 시 규칙: 수상 주체가 '품종'임을 명확히 적어 제품·회사가 받은 상으로 읽히지 않게 한다 -->`;
+
+const aboutPage = () => layout('현농푸드랩 소개', `<main id="main">
+<section class="feature"><div class="wrap feature-inner"><div class="feature-copy"><span class="hero-kicker">ABOUT HYUNNONG FOOD LAB</span><h1>20여 년 농업 전문기업이 만든 식품, 현농푸드랩</h1><p>친환경 농자재 기업 현농과 농업 경영컨설팅 기업 현농경영연구소가 함께 세운 식품 전문 회사입니다.</p><div class="hero-actions"><a class="button" href="/products/barunssal/">바른쌀 누룽지 보기 <span aria-hidden="true">→</span></a></div></div></div><figure class="feature-photo">${media('about-hyunnong.jpg','현농푸드랩 본사 사옥 전경','',true)}</figure></section>
+<div class="read about">
+<section><span class="eyebrow">OUR STORY</span><h2>걸어온 길</h2>${factList(milestones.filter(m=>m.year).map(m=>({term:m.year, copy:e(m.copy)})),'timeline')}</section>
+<section class="prose"><h2>농사 곁에서 쌓은 경험을 식탁으로</h2><p>현농은 2007년부터 친환경 농자재를 만들며 친환경·유기농 재배 경험을 쌓아왔습니다.</p><p>현농경영연구소는 2013년부터 농업인 교육과 경영컨설팅으로 농산물 지식과 생산자 네트워크를 쌓아왔습니다.</p><p>그 경험으로 만든 첫 제품이, 유기농으로 재배한 우리쌀을 간편하게 드실 수 있도록 만든 바른쌀 즉석 누룽지입니다.</p><p>앞으로 우리 농산물로 만든 가공식품을 하나씩 늘려갈 계획입니다.</p><a class="text-link" href="/products/barunssal/">바른쌀 누룽지 보기 <span aria-hidden="true">→</span></a></section>
+<section><h2>숫자로 보는 현농</h2>${factList(aboutFigures.map(f=>({term:f.value, copy:e(f.copy)})))}</section>
+${varietyAward}
+<section><h2>본사</h2><p class="about-address">현농푸드랩 본사 <span aria-hidden="true">·</span> 전남 장성 ${todo('상세주소')}</p></section>
+</div>
+<section class="brand-feature"><div class="wrap brand-feature-inner"><figure>${media('product-main.jpg','바른쌀 즉석 누룽지 단상자와 개별 포장 파우치')}</figure><div class="brand-feature-copy"><span class="eyebrow">FIRST PRODUCT</span><h2>현농푸드랩의 첫 제품,<br>바른쌀 즉석 누룽지</h2><p>국산 유기농쌀 100%. 뜨거운 물 붓고 3분이면 완성됩니다.</p><dl class="brand-facts"><div><dt>한 봉</dt><dd>40g</dd></div><div><dt>열량</dt><dd>152kcal</dd></div><div><dt>원료</dt><dd>국산 유기농쌀</dd></div></dl>${storeCta('스마트스토어에서 구매')}</div></div></section>
+</main>`, 'about', {
+  title:'현농푸드랩 소개 | 20년 농업 전문기업이 만든 식품 브랜드',
+  description:'친환경 농자재 기업 현농과 농업 경영컨설팅 기업 현농경영연구소가 만든 식품 브랜드, 현농푸드랩을 소개합니다.',
+  jsonLd:[organizationLd, {'@context':'https://schema.org','@type':'AboutPage',name:'현농푸드랩 소개',description:'친환경 농자재 기업 현농과 농업 경영컨설팅 기업 현농경영연구소가 만든 식품 브랜드, 현농푸드랩을 소개합니다.'}],
+});
 async function save(path,html) {const dir=join(output,path);await mkdir(dir,{recursive:true});await writeFile(join(dir,'index.html'),html);}
 const seen=new Set();
 for(const p of posts){if(!/^[a-z0-9-]+$/.test(p.slug)||seen.has(p.slug)||!categories[p.category])throw Error('Invalid post record');seen.add(p.slug);}

@@ -1127,10 +1127,11 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
 .needs-info {
   padding: 1px 7px;
   border-radius: 2px;
-  background: rgba(190,154,80,.26);
-  color: rgba(255,255,255,.9);
+  background: rgba(190,154,80,.2);
+  color: #7a5f22;
   font-size: 11px;
 }
+.site-footer .needs-info { background: rgba(190,154,80,.26); color: rgba(255,255,255,.9); }
 
 @media (min-width: 900px) {
   .reading-guide .strip-static { padding: 3px 0; }
@@ -1138,4 +1139,20 @@ h3 { font-size: 19px; line-height: 1.5; font-weight: 700; }
     grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr);
   }
   .brand-feature.is-reversed figure { order: 2; }
+}
+
+/* ---------- 소개 페이지 (수정안 v1) ---------- */
+.about > section + section { margin-top: 46px; }
+.about > section > .eyebrow + h2 { margin-top: 10px; }
+.product-facts.timeline dt {
+  color: var(--brand);
+  font-family: var(--display);
+  font-size: 16px;
+}
+.about-address { color: var(--muted); }
+.about .text-link { margin-top: 4px; }
+
+@media (max-width: 479px) {
+  /* A2 걸어온 길: 모바일은 연도 → 내용 세로 1열 */
+  .product-facts.timeline > div { grid-template-columns: minmax(0,1fr); gap: 4px; }
 }
